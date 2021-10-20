@@ -1,4 +1,4 @@
-const { urlencoded } = require('body-parser');
+// const { urlencoded } = require('body-parser');
 const express = require('express');
 const bodyParser = require('body-parser');
 var users = require('./routes/api/users');
@@ -6,7 +6,7 @@ var notifications = require('./routes/api/notifications');
 
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -17,4 +17,4 @@ app.use("/notifications", notifications)
 
 
 
-app.listen(port, () => console.log(`Server listening on port ${3000}`));3
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));3
