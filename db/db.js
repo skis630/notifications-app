@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = 'mongodb://localhost:27017/notificationsDB';
+const MONGO_URI = 'mongodb://127.0.0.1:27017/notificationsDB';
 mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -9,4 +9,4 @@ mongoose.connect(MONGO_URI, {
     .catch((err) => console.log("error connecting database: ", err));
 
 
-module.exports = mongoose; 
+module.exports = mongoose;
