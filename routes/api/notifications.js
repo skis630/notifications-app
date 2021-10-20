@@ -11,10 +11,9 @@ router.get("/", (req, res) => {
             res.status(500);
             res.send("Error fetching notifications from server");
         } else {
-            res.send(notifications);
+            res.json(notifications);
         }
     })
 })
-
 
 module.exports = router
