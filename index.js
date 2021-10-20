@@ -1,16 +1,18 @@
 const { urlencoded } = require('body-parser');
 const express = require('express');
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
+var users = require('./routes/api/users');
 
 
 const app = express();
 const port = 3000;
 
-app.use(urlencoded({ extended: false }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.use("/", (req, res) => res.send("Dummy server"));
+app.use("/users", users);
+//app.use("/", (req, res) => res.end("Dummy server"));
 
 
 
-app.listen(port, () => console.log(`Server listening on port ${3000}`));
+app.listen(port, () => console.log(`Server listening on port ${3000}`));3
