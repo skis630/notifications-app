@@ -1,4 +1,3 @@
-// const { urlencoded } = require('body-parser');
 const express = require('express');
 const bodyParser = require('body-parser');
 var users = require('./routes/api/users');
