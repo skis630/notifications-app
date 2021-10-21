@@ -4,7 +4,7 @@ const mongoose = require('./db');
 // config
 const SEVERITY_SCHEMA = {
     type: String,
-    enum: ['info', 'succes', 'warning', 'error'],
+    enum: ['info', 'success', 'warn', 'error'],
     default: 'info'
 }
 
@@ -26,13 +26,13 @@ const usersSchema = new mongoose.Schema({
     ],
     notification_duration: {
         type: Number,
-        min: 1,
-        max: 4
+        min: 1000,
+        max: 4000
     },
     notification_interval: {
         type: Number,
-        min: 5,
-        max: 10
+        min: 5000,
+        max: 10000
     }
 }, { collection: "users" });
 const User = mongoose.model('User', usersSchema);
