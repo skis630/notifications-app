@@ -16,4 +16,4 @@ app.use("/notifications", notifications)
 
 
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));3
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
