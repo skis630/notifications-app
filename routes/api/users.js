@@ -5,20 +5,18 @@ const User = userModel.User;
 const userSchema = userModel.usersSchema;
 const sanitize = require('mongo-sanitize');
 const between = require('../../utils').between;
-// const uuid = require('uuid');
-// const callback = require('../../utils').callback;
 
-
-router.put("/:id/clicked_notifications", async (req, res) => {
+// 
+router.put("/:id/clicked_notifications", (req, res) => {
     const newClickedNotification = sanitize(req.body);
     const id = sanitize(req.params.id);
 
-    await User.findById(id, async (err, user) => {
+    User.findById(id, (err, user) => {
         console.log(user, id);
         if (!err && user) {
             console.log(user.clicked_notifications);
             user.clicked_notifications.push(newClickedNotification);
-            await user.save(error => {
+            user.save(error => {
                 if (error) {
                     console.log("error: ", error);
                     res.send("Error updating clicked notifications")
