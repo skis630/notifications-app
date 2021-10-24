@@ -1,12 +1,12 @@
 
 
-const callback = (err, result) => {
-    if (!err) {
-        console.log(result);
-    } else {
-        console.log(err);
-    }
-}
+// const callback = (err, result) => {
+//     if (!err) {
+//         console.log(result);
+//     } else {
+//         console.log(err);
+//     }
+// }
 
 const between = (min, max) => {  
     return Math.floor(
@@ -16,6 +16,6 @@ const between = (min, max) => {
 
 
 module.exports = {
-    callback,
+    // callback,
     between
 }
