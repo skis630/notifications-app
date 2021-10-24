@@ -1,3 +1,4 @@
 node_modules/
 package-lock.json
 notifications_app.code-workspace
+.env
