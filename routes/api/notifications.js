@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Notification = require('../../db/models').Notification;
-const sanitize = require('mongo-sanitize');
 
 
 router.get("/", (req, res) => {
