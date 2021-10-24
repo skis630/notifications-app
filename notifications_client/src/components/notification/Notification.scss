@@ -1,0 +1,83 @@
+@import '../../vars';
+
+
+.notification {
+    margin-right: 2%;
+    margin-top: 15px;
+    padding: 4px 12px;
+    width: 40%;
+    float: right;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 2000px) {
+    .notification {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 100px) {
+    .notification {
+        width: 60%;
+    }
+}
+
+.notification.hide {
+    display: none;
+}
+
+.notification.info {
+    color: #7fb2e0;
+    background-color: #e7f3fe;
+    border: $border;
+    border-radius: $border-radius;
+}
+
+.notification.success {
+    background-color: #ddffdd;
+    color: green;
+    border: $border;
+    border-radius: $border-radius;
+}
+
+.notification.warn {
+    background-color: #ffffcc;
+    color: lightcoral;
+    border: $border;
+    border-radius: $border-radius;
+}
+
+.notification.error {
+    background-color: #ffdddd;
+    color: red;
+    border: $border;
+    border-radius: $border-radius;
+}
+
+.notification {
+    i {
+        font-size: 2rem;
+        margin-top: 10px;
+        margin-right: 3%;
+        float: left;
+    }
+
+    p {
+        float: left;
+    }
+}
+
+.close-btn {
+    margin-left: 10%;
+    color: lightgray;
+    font-weight: bold;
+    float: right;
+    font-size: 1.5rem;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: black;
+}
