@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 var users = require('./routes/api/users');
 var notifications = require('./routes/api/notifications');
 
@@ -12,8 +13,7 @@ app.use(bodyParser.json());
 
 app.use("/users", users);
 app.use("/notifications", notifications)
-//app.use("/", (req, res) => res.end("Dummy server"));
-
+app.use(express.static(path.join(__dirname, "..", "notifications_client/build")));
 
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
