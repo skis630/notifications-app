@@ -15,7 +15,8 @@ Run from "notifications_client/" folder: `npm start`
 2. **To run server in dev mode:**
 Run from "notifications_server/": `npm run-script dev`
 3. **Run server in production mode:**
-On "notifications_server/": `npm start`
+* Run: `npm run build` in notifications_client/
+* On "notifications_server/": `npm start`
 
 ### Run mongo migration files
 1. **Recomemended: install migrate-mongo globally (otherwise will need to run command from source in node_modules/):**
